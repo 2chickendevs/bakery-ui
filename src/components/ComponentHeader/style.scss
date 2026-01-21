@@ -1,0 +1,19 @@
+@import '@/style/variable.scss';
+@import '@/style/placeholder.scss';
+@import '@/style/globalStyle.scss';
+
+.component-header-container {
+  @extend %flex-horizontal;
+  width: 100%;
+  height: $standardPoint * 8;
+  padding: $standardPoint;
+  align-items: center;
+  justify-content: space-between;
+  gap: $standardPoint;
+}
+
+.component-header-title {
+  margin-right: auto;
+  font-size: $fontSizeSm;
+  font-weight: bold;
+}

@@ -1,0 +1,60 @@
+@use '@/style/variable.scss' as *;
+
+// =====================
+// Placeholders (extends)
+// =====================
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+%box-shadow-top-right {
+  box-shadow: $shadow-sm; // subtle shadow (closest "small directional" feel)
+}
+
+%box-shadow-all {
+  box-shadow: $shadow-md; // general purpose "all around" shadow
+}
+
+// =====================
+// Mixins (optional but useful)
+// =====================
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+// Updated mixin: use new tokens
+@mixin box-shadow($type: md) {
+  @if $type == xs {
+    box-shadow: $shadow-xs;
+  } @else if $type == sm {
+    box-shadow: $shadow-sm;
+  } @else if $type == md {
+    box-shadow: $shadow-md;
+  } @else if $type == lg {
+    box-shadow: $shadow-lg;
+  } @else if $type == elevated {
+    box-shadow: $shadow-elevated;
+  } @else if $type == action {
+    box-shadow: $shadow-action;
+  } @else if $type == icon {
+    box-shadow: $shadow-icon;
+  } @else {
+    // fallback
+    box-shadow: $shadow-md;
+  }
+}

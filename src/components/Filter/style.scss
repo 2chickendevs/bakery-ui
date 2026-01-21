@@ -1,0 +1,14 @@
+@import '@/style/variable.scss';
+@import '@/style/placeholder.scss';
+@import '@/style/globalStyle.scss';
+
+.filter-container {
+  @extend %flex-horizontal;
+  height: $standardPoint * 8;
+  align-items: center;
+  gap: $standardPoint;
+}
+
+.filter-dropdown {
+  height: $standardPoint * 4;
+}

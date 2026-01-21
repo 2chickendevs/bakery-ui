@@ -1,0 +1,75 @@
+.nf {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: $space-3;
+  background: $bg-gradient;
+  font-family: $font-family-sans;
+}
+
+.nf-card {
+  @extend %flex-vertical;
+  gap: $space-2;
+
+  width: 100%;
+  max-width: 420px;
+  padding: $space-6 $space-4;
+  text-align: center;
+
+  background: $surface-1;
+  border-radius: $radius-xl;
+  border: $border-ui;
+
+  @include box-shadow(elevated);
+}
+
+.nf-code {
+  margin: 0;
+  font-size: $font-xl;
+  font-weight: 800;
+
+  // gradient text using your brand colors
+  background: linear-gradient(90deg, $color-primary, $color-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nf-title {
+  margin: 0;
+  font-size: $font-md;
+  font-weight: 700;
+  color: $color-text;
+}
+
+.nf-desc {
+  margin: 0 0 $space-3;
+  font-size: $font-base;
+  color: $color-muted;
+}
+
+.nf-btn {
+  @extend %flex-center;
+
+  width: 100%;
+  padding: $space-2 $space-3;
+  border-radius: $radius-lg;
+  border: none;
+
+  font-size: $font-base;
+  font-weight: 700;
+  color: $surface-1;
+
+  cursor: pointer;
+  background: linear-gradient(90deg, $color-primary, $color-accent);
+
+  @include box-shadow(action);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nf-btn:hover {
+  box-shadow: rgba(255, 122, 24, 0.35) 0 16px 36px; // accent glow (kept custom for nicer hover)
+}
+
+.nf-btn:active {
+  transform: translateY(1px);
+}

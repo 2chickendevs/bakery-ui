@@ -1,0 +1,23 @@
+@import '@/style/variable.scss';
+@import '@/style/placeholder.scss';
+@import '@/style/globalStyle.scss';
+
+.header-container {
+  width: 100%;
+  height: $standardPoint * 9;
+  @extend %flex-horizontal;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $greenDarnerTail;
+  padding: $standardPoint $standardPoint * 3;
+  border-radius: $borderRadiusStandard;
+
+  .header-greeting {
+    font-size: $fontSizeXs;
+    color: white;
+  }
+}
+
+.header-user-container {
+  cursor: pointer;
+}

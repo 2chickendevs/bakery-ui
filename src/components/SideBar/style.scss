@@ -1,0 +1,70 @@
+@import '@/style/variable.scss';
+@import '@/style/placeholder.scss';
+@import '@/style/globalStyle.scss';
+
+.sidebar-layout {
+  width: 100%;
+  height: 100%;
+  padding: $standardPoint 0 $standardPoint $standardPoint;
+  background-color: $pageBackgroundColor;
+}
+
+.sidebar-container {
+  width: 100%;
+  height: 100%;
+  @extend %flex-vertical;
+  background-color: white;
+  padding: $standardPoint;
+  border-radius: $borderRadiusStandard;
+}
+
+.sidebar-menus {
+  width: 100%;
+  @extend %flex-vertical;
+  gap: $standardPoint;
+  margin-bottom: $standardPoint;
+
+  .sidebar-menu.active {
+    color: white;
+    background-color: $greenDarnerTail;
+  }
+}
+
+.sidebar-logo,
+.sidebar-menu {
+  width: 100%;
+  @extend %flex-horizontal;
+  align-items: center;
+  height: $standardPoint * 7;
+  gap: $standardPoint;
+  border-radius: $borderRadiusStandard;
+}
+
+.sidebar-logo {
+  margin-top: $standardPoint * 2;
+  margin-bottom: $standardPoint * 3;
+
+  img {
+    width: $standardPoint * 7;
+    height: $standardPoint * 7;
+  }
+
+  div {
+    font-size: $fontSizeXs;
+    font-weight: bold;
+  }
+}
+
+.sidebar-menu {
+  cursor: pointer;
+  color: $americanRiver;
+  padding: $standardPoint;
+}
+
+.sidebar-menu:hover {
+  background-color: $pageBackgroundColor;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}

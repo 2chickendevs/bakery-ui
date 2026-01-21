@@ -1,0 +1,10 @@
+.loading-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  @extend %flex-center;
+  background-color: $surface-2;
+  z-index: 999999;
+}

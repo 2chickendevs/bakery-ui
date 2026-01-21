@@ -1,0 +1,21 @@
+@import '@/style/variable.scss';
+@import '@/style/placeholder.scss';
+@import '@/style/globalStyle.scss';
+
+.center-layout-container {
+  width: 100vw;
+  height: 100vh;
+  @extend %flex-horizontal;
+  justify-content: space-between;
+}
+
+.center-layout-sidebar {
+  width: $standardPoint * 32;
+}
+
+.center-layout-content {
+  padding: $standardPoint;
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: $pageBackgroundColor;
+}

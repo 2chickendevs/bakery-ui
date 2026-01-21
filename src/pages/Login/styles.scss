@@ -1,0 +1,236 @@
+/* =====================
+   PAGE
+===================== */
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: $bg-gradient;
+  font-family: $font-family-sans;
+}
+
+/* =====================
+   CARD
+===================== */
+.login-card {
+  width: 100%;
+  max-width: $standardPoint * 52; // 416px
+  background: $surface-1;
+  border-radius: $radius-xl;
+  padding: $space-4; // 32px
+  box-shadow: $shadow-elevated;
+  animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY($space-2); // 16px
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   HEADER
+===================== */
+.login-header {
+  text-align: center;
+  margin-bottom: $space-3; // 24px
+
+  h1 {
+    margin: 0;
+    font-size: $font-md; // 30px (using token)
+    font-weight: 700;
+    background: linear-gradient(90deg, $color-primary, $color-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    margin-top: $space-1; // 8px
+    color: $color-muted;
+    font-size: $font-base; // 18px
+  }
+}
+
+/* =====================
+   ALERT
+===================== */
+.alert {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: $space-2; // 16px
+  border-radius: $radius-sm;
+  font-size: $font-base; // 18px
+  margin-bottom: $space-2; // 16px
+}
+
+/* =====================
+   FORM
+===================== */
+.field {
+  margin-bottom: $space-2; // 16px
+
+  span {
+    display: block;
+    font-size: $font-base; // 18px
+    color: $color-muted;
+    margin-bottom: $space-1; // 8px
+  }
+
+  input {
+    width: 100%;
+    padding: $space-2; // 16px
+    border-radius: $radius-md;
+    border: $border-ui;
+    font-size: $font-base; // 18px
+    color: $color-text;
+    background: $surface-1;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 $space-1 rgba(108, 99, 255, 0.2); // 8px
+    }
+  }
+}
+
+.username-row, .password-row {
+  display: flex;
+  gap: $space-1; // 8px
+}
+
+.ghost-btn {
+  padding: 0 $space-2; // 16px
+  border-radius: $radius-sm;
+  border: none;
+  background: $surface-3;
+  cursor: pointer;
+  font-size: $font-base;
+  color: $color-text;
+}
+
+
+.field-error {
+  display: block;
+  margin-top: $space-1;
+  font-size: $font-base;
+  color: $color-danger;
+}
+
+.field input[aria-invalid='true'] {
+  border: $border-width $border-style $color-danger;
+  background-color: rgba($color-danger, 0.05);
+}
+
+/* =====================
+   BUTTON
+===================== */
+.primary-btn {
+  width: 100%;
+  padding: $space-2; // 16px
+  border-radius: $radius-lg;
+  border: none;
+  background: linear-gradient(135deg, $color-primary, $color-accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: $space-2; // 16px
+  box-shadow: $shadow-action;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+/* =====================
+   DIVIDER
+===================== */
+.divider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: $space-2; // 16px
+  align-items: center;
+  margin: $space-3 0; // 24px
+
+  span {
+    height: 1px; // hairline is fine
+    background: $border-color;
+  }
+
+  em {
+    font-style: normal;
+    font-size: $font-base; // 18px
+    color: $color-muted;
+  }
+}
+
+/* =====================
+   SOCIAL ICONS
+===================== */
+.social-text {
+  text-align: center;
+  font-size: $font-base; // 18px
+  color: $color-muted;
+  margin-bottom: $space-2; // 16px
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: $space-2; // 16px
+}
+
+.social-icon {
+  width: $space-6; // 48px
+  height: $space-6; // 48px
+  border-radius: 50%;
+  background: $surface-1;
+  border: $border-ui;
+  display: grid;
+  place-items: center;
+  font-size: $icon-md; // 24px
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: $shadow-icon;
+
+  &:hover {
+    transform: translateY(-$space-1); // -8px
+  }
+
+  &.google {
+    color: #ea4335;
+  }
+
+  &.facebook {
+    color: #1877f2;
+  }
+
+  &.github {
+    color: #111827;
+  }
+
+  &.apple {
+    color: #000;
+  }
+}
+
+/* =====================
+   FOOTER
+===================== */
+.login-footer {
+  margin-top: $space-3; // 24px
+  text-align: center;
+  font-size: $font-base; // 18px
+  color: $color-muted;
+
+  a {
+    color: $color-primary;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}

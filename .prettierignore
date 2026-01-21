@@ -1,0 +1,12 @@
+public
+node_modules
+build
+package.json
+package-lock.json
+README.md
+*.min.js
+.gitlab-ci.yml
+.prettierrc.js
+.eslintrc.js
+index.html
+vercel.json
