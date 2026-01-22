@@ -5,8 +5,11 @@ import { FaApple, FaFacebookF, FaGithub, FaGoogle } from 'react-icons/fa';
 import { useLogin } from '@/hook/useLogin';
 import Loading from '@/components/Loading';
 import { getGoogleLoginUrl } from '@/service/auth';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -53,6 +56,10 @@ const LoginPage = () => {
     if (provider === 'google') {
       window.location.href = getGoogleLoginUrl();
     }
+  }
+
+  function navigateSignUpPage() {
+    navigate('/signup');
   }
 
   return (
@@ -145,7 +152,7 @@ const LoginPage = () => {
         </div>
 
         <footer className="login-footer">
-          New here? <a href="#">Create account</a>
+          New here? <a onClick={navigateSignUpPage}>Create account</a>
         </footer>
       </div>
     </div>
